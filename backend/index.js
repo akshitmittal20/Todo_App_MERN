@@ -78,6 +78,23 @@ app.put("/completed", async(req,res)=>{
 })
 
 
-
+app.delete("/delete", async(req,res)=>{
+    const todoId= req.body;
+    const validatePayload = updateTodo.safeParse(todoId);
+    if(!validatePayload.success){
+        res.status(402).json({
+            msg:"You sent the wrong inputs"
+        })
+        return;
+    }
+    
+    console.log("cursor reached here, before delete")
+    await todoModel2.deleteOne({
+        _id:req.body._id
+    })
+    res.json({
+        msg: "todo deleted succesfully"
+    })
+})
 
 app.listen(3000)

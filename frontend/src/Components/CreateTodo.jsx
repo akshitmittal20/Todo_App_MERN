@@ -30,7 +30,7 @@ export function CreateTodo(props){
                 }       //headers is necessary to send along, if sending request through some frontend 
             })
             .then(async function(res){     //we can also use async await instead of promise, like we had done in app.jsx
-                alert("Todo Added")     //if fetch method completes, only then, thsi alert wil come
+                alert("Press OK to Continue")     //if fetch method completes, only then, thsi alert wil come
                 
 
                 //we could use axios library too instead of fetch method. more professional!

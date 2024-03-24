@@ -17,10 +17,25 @@ export function DisplayTodo({todos}){
                             "content-type":"application/json"
                         } 
                     })
-                        .then(async function(res){
-                        alert("Todo updatd to Completed")
-                        })
+                        // .then(async function(res){
+                        //     alert("Todo is marked to Completed")
+                        // })
                 }}>{todo.completed==true?"Completed": "Mark as Completed"}</button>
+                
+                <button onClick={()=>{
+                    fetch("http://localhost:3000/delete",{
+                        method:"DELETE",
+                        body:JSON.stringify({
+                            _id:todo._id
+                        }),
+                        headers:{
+                            "content-type": "application/json"
+                        }
+                    })
+                    .then( async function(res){
+                        alert("Are you sure, you want to Delete");
+                    })
+                }}>   Delete </button>
             </div>
         })}
     </div>
