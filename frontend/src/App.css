@@ -1,4 +1,58 @@
 #root {
-
   text-align:center;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+
+.addATodo{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: large;
+}
+
+.addATodo:hover  {
+  /* font-size: 20px; */
+  color: aliceblue;
+  background-color: rgb(94, 104, 169) ;
+  transition: background-color 0.5s ease;
+}
+
+
+.displayTodo{
+  background-color: #fffaf0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+.updateTodo{
+  padding: 8px 12px;
+  font-size:medium;
+  margin:10px;
+}
+
+.updateTodo:hover{
+  font-size:larger;
+  color: aliceblue;
+  background-color: rgb(230, 184, 17) ;
+  transition: background-color 0.4s ease;
+}
+
+.deleteTodo{
+  padding: 8px 12px;
+  font-size:medium;
+  margin:10px;
+}
+
+.deleteTodo:hover{
+  font-size:larger;
+  color: aliceblue;
+  background-color: rgb(128, 17, 9) ;
+  transition: background-color 0.6s ease;
+}
+
