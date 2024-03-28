@@ -36,7 +36,7 @@ export function DisplayTodo(props){
                 }}>{todo.completed==true?"Completed": "Mark as Completed"}</button>
                 
                 <button className="deleteTodo" onClick={()=>{
-                    fetch("http://localhost:3000/delete",{
+                    fetch("https://todo-app-mern-omega.vercel.app/delete",{
                         method:"DELETE",
                         body:JSON.stringify({
                             _id:todo._id

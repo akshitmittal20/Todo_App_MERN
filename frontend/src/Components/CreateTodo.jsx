@@ -36,7 +36,7 @@ export function CreateTodo(props){
                 
 
                 //we could use axios library too instead of fetch method. more professional!
-                axios.post("http://localhost:3000/todo",{
+                axios.post("https://todo-app-mern-omega.vercel.app/todo",{
                     title:title,
                     description:desc  
                 })

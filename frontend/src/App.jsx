@@ -36,7 +36,7 @@ function App() {
 //that condition can be using the setinterval for 10 seconds and putting fetch inside that, so that fetc only calls after 10 second to check if database havebeen updated or not, instead of being called again n again like here!!
 
   useEffect(()=>{
-    fetch("http://localhost:3000/todos")
+    fetch("https://todo-app-mern-omega.vercel.app/todos")
     .then(async(res)=>{
       const json = await res.json();
       setTodos(json.todos)
