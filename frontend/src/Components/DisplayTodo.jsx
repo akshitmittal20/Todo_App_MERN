@@ -11,7 +11,7 @@ export function DisplayTodo(props){
                 <h2>{todo.title}</h2>
                 <h3>{todo.description}</h3>
                 <button  className="updateTodo"  onClick={()=>{
-                    fetch("http://localhost:3000/completed",{       //calling backend update todo method
+                    fetch("https://todo-app-mern-omega.vercel.app/completed",{       //calling backend update todo method
                         method:"PUT",
                         body: JSON.stringify({
                             _id: todo._id       //fetching id of this todo from db , as our body need todo is as defined in the put function code in backend 
